@@ -6,9 +6,8 @@ public class LinkedListQuiz {
         ListNode previous = null;
         while (current != null){
             if(current.getValue().equals(val)){
-                if(current.equals(firstNode)){
+                if(previous==null){
                     firstNode = current.getNext();
-                    previous = current;
                 }
                 else{
                     previous.setNext(current.getNext());
